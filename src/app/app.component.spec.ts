@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing'
+import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing'
 import { RouterTestingModule } from '@angular/router/testing'
 import { AppComponent } from './app.component'
 
@@ -6,7 +6,7 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [AppComponent],
+      declarations: [AppComponent]
     }).compileComponents()
   })
 
@@ -35,6 +35,33 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent)
     const app = fixture.componentInstance
 
-    expect(app.myTitle).toEqual(app.title + '-')
+    expect(app.myTitle).toEqual(app.title)
+  })
+
+  describe('my custom test', () => {
+    type TestCaseData = {
+      numberA: number
+      numberB: number
+      sum: number
+    }
+
+    const testCases: TestCaseData[] = [
+      { numberA: 1, numberB: 2, sum: 3 },
+      { numberA: 9, numberB: 2, sum: 11 },
+      { numberA: 0, numberB: 6, sum: 6 },
+      { numberA: 0, numberB: 0, sum: 0 }
+    ]
+
+    testCases.forEach((test: TestCaseData) => {
+      it(`${test.numberA} + ${test.numberB} should be ${test.sum}`, () => {
+        const fixture = TestBed.createComponent(AppComponent)
+        const app = fixture.componentInstance
+
+        app.numberA = test.numberA
+        app.numberB = test.numberB
+
+        expect(app.sum).toBe(test.sum)
+      })
+    })
   })
 })
