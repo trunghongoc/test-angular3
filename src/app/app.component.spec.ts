@@ -22,15 +22,6 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular3')
   })
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent)
-    fixture.detectChanges()
-    const compiled = fixture.nativeElement
-    expect(compiled.querySelector('.content span').textContent).toContain(
-      'angular3 app is running!'
-    )
-  })
-
   it('myTitle should be equal title', () => {
     const fixture = TestBed.createComponent(AppComponent)
     const app = fixture.componentInstance
