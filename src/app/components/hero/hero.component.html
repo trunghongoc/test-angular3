@@ -1,0 +1,6 @@
+<p class="app-hero">hero works!</p>
+<div *ngIf="hero">
+  <input nz-input placeholder="Hero name" [(ngModel)]="hero.name" />
+
+  <h1>{{ hero.name | uppercase }}</h1>
+</div>

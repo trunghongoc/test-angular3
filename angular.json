@@ -35,7 +35,7 @@
                 "output": "/assets/"
               }
             ],
-            "styles": ["src/theme.less", "src/styles.scss"],
+            "styles": ["src/scss/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -94,7 +94,7 @@
             "karmaConfig": "karma.conf.js",
             "codeCoverage": true,
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/scss/styles.scss"],
             "scripts": []
           }
         },
