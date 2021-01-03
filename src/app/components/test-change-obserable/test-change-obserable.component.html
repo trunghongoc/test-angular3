@@ -1,0 +1,11 @@
+<nz-radio-group [(ngModel)]="currentSize">
+  <label nz-radio-button nzValue="large" (click)="changeSize('large')"
+    >Large</label
+  >
+  <label nz-radio-button nzValue="default" (click)="changeSize('default')"
+    >Default</label
+  >
+  <label nz-radio-button nzValue="small" (click)="changeSize('small')"
+    >Small</label
+  >
+</nz-radio-group>

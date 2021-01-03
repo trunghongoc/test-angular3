@@ -45,6 +45,8 @@ import { MessagesComponent } from './components/messages/messages.component'
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api'
 import { InMemoryDataService } from './services/in-memory-data/in-memory-data.service'
 import { HeroSearchComponent } from './components/hero-search/hero-search.component'
+import { TestChangeObserableComponent } from './components/test-change-obserable/test-change-obserable.component'
+import { TestSubcribeObserableComponent } from './components/test-subcribe-obserable/test-subcribe-obserable.component'
 
 registerLocaleData(en)
 
@@ -55,7 +57,9 @@ registerLocaleData(en)
     HeroComponent,
     HeroesComponent,
     MessagesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    TestChangeObserableComponent,
+    TestSubcribeObserableComponent
   ],
   imports: [
     BrowserModule,
